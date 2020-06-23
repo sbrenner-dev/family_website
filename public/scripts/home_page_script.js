@@ -10,6 +10,9 @@ function logout() {
 }
 
 function loadAssets() {
+
+    // Loading messages
+
     fetch("http://192.168.1.19:3000/post/get_messages", {
         method: "GET"
     }).then(response => {
@@ -17,7 +20,7 @@ function loadAssets() {
         return response.text();
     }).then(text => {
         let entries = text.substring(1, text.length - 1).split("},");
-        entries.forEach(entry => {
+        entries.slice().reverse().forEach((entry) => {
             let messages = document.getElementById("messages");
             if (entry === "") {
                 messages.innerHTML = "<div style=\"font-size:15px;padding-left:10px;\">No new messages!</div>";
@@ -38,6 +41,14 @@ function loadAssets() {
             }
         });
     });
+
+    // Load user profile image and name
+
+    let username = getCookie("username");
+    let prev = document.getElementById("user").innerHTML;
+    let user_html = username;
+    
+    document.getElementById("user").innerHTML = username + prev;
 }
 
 function postMessage() {

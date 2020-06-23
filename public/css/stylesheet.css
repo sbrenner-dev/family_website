@@ -32,12 +32,14 @@ h2 {
 .form {
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
     border: 7px solid black;
-    padding: 0.625em 0.625em;
     background-color: white;
     width: 15%;
     padding: 50px;
+    margin: 10px 0 10px 0;
+    border-spacing: 15px;
 }
 
 .field {

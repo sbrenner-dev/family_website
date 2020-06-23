@@ -9,10 +9,10 @@ body {
     justify-content: center;
     height: 100vh;
     overflow: hidden;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-h2 {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+h1 {
     font-size: 30px;
 }
 
@@ -53,19 +53,22 @@ h2 {
     display: flex;
     flex-direction: row;
     font-size: 30px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.logout {
+.user {
     position: absolute;
-    right: 0;
-    padding-top: 10px;
-    padding-right: 10px;
+    right: 5px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    border: 7px solid black;
+    background-color: white;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .button {
     cursor: pointer;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 20px;
     background-color: blue;
     border: 2px solid black;
@@ -88,12 +91,10 @@ h2 {
 }
 
 .field {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 20px;
 }
 
 .entry {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     padding: 10px;
     margin: 0 auto;
     outline: none;
@@ -102,7 +103,7 @@ h2 {
 }
 
 .content_entry {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
     padding: 10px;
     margin: 0 auto;
     outline: none;
