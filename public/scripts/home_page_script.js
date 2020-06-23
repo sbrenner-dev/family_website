@@ -28,15 +28,7 @@ function loadAssets() {
                 if (entry[entry.length - 1] !== "}") {
                     entry += "}";
                 }
-                let e = new Encoder();
-                let json = JSON.parse(entry);
-                let date = new Date(json.post_time);
-                let html = "<div style=\"font-size:25px;padding-left:10px;\">" + e.decode(json.title) + "</div>";
-                html += "<div style=\"font-size:10px;padding-left:10px;\">By " 
-                    + json.post_username + " on " + date.toLocaleDateString() + " at "
-                    + date.toLocaleTimeString() + "</div>";
-                html += "<div style=\"font-size:15px;padding-left:10px;\">" + e.decode(json.contents) + "</div>";
-                html += "<br>";
+                let html = (new HtmlPostMessageCreator(entry)).getHTML(getCookie);
                 messages.innerHTML += html;
             }
         });
@@ -47,7 +39,7 @@ function loadAssets() {
     let username = getCookie("username");
     let prev = document.getElementById("user").innerHTML;
     let user_html = username;
-    
+
     document.getElementById("user").innerHTML = username + prev;
 }
 
@@ -111,6 +103,22 @@ function getCookie(cname) {
 function clearAll(args) {
     args.forEach(e => {
         document.getElementById(e).value = "";
+    });
+}
+
+function deleteMsg(title) {
+
+    fetch("http://192.168.1.19:3000/post/delete_board_message/" + title, {
+        method: "DELETE",
+        body: title
+    }).then(response => {
+        console.log(response);
+        if (response.ok) {
+            clearAll(["title", "contents"]);
+            window.location.href = "http://192.168.1.19:3000/home";
+        } else {
+            console.log("trouble with status = " + response.status);
+        }
     });
 }
 

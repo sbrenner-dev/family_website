@@ -13,7 +13,7 @@ function login() {
         console.log(response);
         if (response.ok) {
             window.location.href = "http://192.168.1.19:3000/home";
-            document.cookie = "username=" + username + ";path=/"
+            document.cookie = "username=" + username + ";path=/";
         } else if (response.status === 401) {
             // wrong password
             alert("Incorrect password for " + username);
@@ -23,7 +23,7 @@ function login() {
             alert("No user " + username + " found");
             clearAll(["username", "password"]);
         }
-    })
+    });
 }
 
 function redirectCreate() {

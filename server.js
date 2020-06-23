@@ -15,6 +15,7 @@ let LoginUser = require("./routes/LoginUser");
 let HomePage = require("./routes/Home");
 let PostMessage = require("./routes/PutPostMessage");
 let GetPostMessages = require("./routes/GetPostMessages");
+let DeletePostMessage = require("./routes/DeletePost");
 
 app.listen(PORT, () => console.info("Server has started on", PORT));
 
@@ -29,3 +30,4 @@ app.use("/", LoginUser);
 app.use("/", HomePage);
 app.use("/post", PostMessage);
 app.use("/post", GetPostMessages);
+app.use("/post", DeletePostMessage);

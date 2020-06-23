@@ -28,10 +28,10 @@ function create() {
             "Content-Type": "application/json"
         }
     }).then(response => {
-        console.log(response)
+        console.log(response);
         if (response.ok) {
             window.location.href = "http://192.168.1.19:3000/home";
-            document.cookie = "username=" + username + ";path=/"
+            document.cookie = "username=" + username + ";path=/";
         } else {
             alert("User with this username already exists!");
             clearAll(["username", "password", "name", "birthday"]);

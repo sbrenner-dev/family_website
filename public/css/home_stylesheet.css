@@ -39,6 +39,7 @@ h1 {
     background-color: white;
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 50%;
     height: 10%;
     border: 7px solid black;
@@ -67,6 +68,15 @@ h1 {
     justify-content: space-between;
 }
 
+.delete_button {
+    cursor: pointer;
+    font-size: 14px;
+    background-color: blue;
+    border: 2px solid black;
+    border-radius: 33px !important;
+    color: white;
+}
+
 .button {
     cursor: pointer;
     font-size: 20px;
@@ -76,13 +86,18 @@ h1 {
     color: white;
 }
 
-.button:focus{
+.delete_button:focus, .button:focus{
     outline: 0;
 }
 
 .button:active {
     background-color: rgb(138, 152, 212);
     font-size: 19px;
+}
+
+.delete_button:active {
+    background-color: rgb(138, 152, 212);
+    font-size: 13px;
 }
 
 .copyright {
@@ -130,4 +145,19 @@ ul {
     overflow-wrap: break-word;
     word-wrap: break-word;
     /* border: 7px solid black; */
+}
+
+.trash {
+    width: 0;
+    height: 0;
+    cursor: pointer;
+}
+
+.trash:focus {
+    outline: 0;
+}
+
+.trash:active {
+    width: 5%;
+    height: 5%;
 }
