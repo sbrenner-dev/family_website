@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript" src="../scripts/create_page_script.js"></script>
+        <link rel="stylesheet" href="../css/stylesheet.css">
+    </head>
+    <body>
+        <div class="form">
+            <h2>
+                Create Account
+            </h2>
+            <br>
+            <label for="username" class="field">Username</label><br>
+            <input type="text" id="username"  name="username"  class="entry" onclick="this.select()" required><br><br>
+            <label for="password" class="field">Password</label><br>
+            <input type="password" id="password" name="password" class="entry" onclick="this.select()" required><br><br>
+            <label for="name" class="field">Full Name</label><br>
+            <input type="text" id="name" name="name" class="entry" onclick="this.select()" required><br><br>
+            <label for="birthday" class="field">Birthday:</label><br>
+            <input type="date" id="birthday" name="birthday" class="entry" ><br><br>
+            <button class="button" onclick="create()">Create Account</button><br>
+        </div>
+        <div class="copyright">
+            ©2020 Sam Brenner
+        </div>
+    </body>
+</html>

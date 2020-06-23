@@ -1,0 +1,70 @@
+body {
+    background-image: url(../assets/house.png);
+    background-color: lightgray;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+h1 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 60px;
+}
+
+h2 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 30px;
+}
+
+.entry {
+    padding: 10px;
+    margin: 0 auto;
+    outline: none;
+    border: 2px solid black;
+    border-radius: 50px !important;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 7px solid black;
+    padding: 0.625em 0.625em;
+    background-color: white;
+    width: 15%;
+    padding: 50px;
+}
+
+.field {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+}
+
+.button {
+    cursor: pointer;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+    background-color: blue;
+    border: 2px solid black;
+    border-radius: 33px !important;
+    color: white;
+}
+
+.button:focus{
+    outline: 0;
+}
+
+.button:active {
+    background-color: rgb(138, 152, 212);
+    font-size: 19px;
+}
+
+.copyright {
+    position: absolute;
+    bottom: 0;
+}

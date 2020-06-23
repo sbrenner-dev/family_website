@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript" src="../scripts/login_page_script.js"></script>
+        <link rel="stylesheet" href="../css/stylesheet.css">
+    </head>
+    <body>
+        <div class="form">
+            <h2>
+                Login
+            </h2>
+            <br><br>
+            <label for="username" class="field">Username</label><br>
+            <input type="text"  id="username"  name="username"  class="entry" onclick="this.select()" required><br><br>
+            <label for="password" class="field">Password</label><br>
+            <input type="password" id="password" name="password" class="entry" onclick="this.select()" required><br><br>
+            <button class="button" onclick="login()">Login</button><br>
+            <button class="button" onclick="redirectCreate()">Create an Account</button>
+        </div>
+        <div class="copyright">
+            ©2020 Sam Brenner
+        </div>
+    </body>
+</html>
