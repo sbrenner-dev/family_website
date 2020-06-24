@@ -13,12 +13,20 @@ function create() {
     dates[0] = dates[1] === 12 ? dates[0] - 1 : dates[0];
     var birthday = new Date(dates[0], dates[1], dates[2]);
 
+    var email = document.getElementById("email").value;
+    var email_notifs = document.getElementById("receive_notifs").value;
+
+    console.log(email);
+    console.log(email_notifs);
+
     let json = JSON.stringify({
         "username": username,
         "password": password,
         "firstname": firstname,
         "lastname": lastname,
-        "birthday": birthday
+        "birthday": birthday,
+        "email": email,
+        "email_notifs": email_notifs
     });
 
     fetch("http://192.168.1.19:3000/create/new_user/" + json, {
@@ -34,7 +42,7 @@ function create() {
             document.cookie = "username=" + username + ";path=/";
         } else {
             alert("User with this username already exists!");
-            clearAll(["username", "password", "name", "birthday"]);
+            clearAll(["username", "password", "name", "birthday", "email", "receive_notifs"]);
         }
     });
 }

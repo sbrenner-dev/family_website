@@ -4,7 +4,7 @@ const path = require("path");
 
 let db = mongoose.connection;
 
-fs.readFile("/mnt/c/Development/Servers/DB_Passwords/FamilyServer.txt", (error, data) => {
+fs.readFile("/mnt/c/Development/Servers/Passwords/FamilyServer.txt", (error, data) => {
     if (error) throw error;
     let pass = data.toString();
 
@@ -15,11 +15,11 @@ fs.readFile("/mnt/c/Development/Servers/DB_Passwords/FamilyServer.txt", (error, 
         useUnifiedTopology: true
     });
 
-    db.on("error", function (err) {
+    db.on("error", function(err) {
         console.log("Mongoose Error: ", err);
     });
 
-    db.once("open", function () {
+    db.once("open", function() {
         console.log("Mongoose connection successful.");
     });
 });

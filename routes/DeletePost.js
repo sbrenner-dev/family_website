@@ -10,7 +10,7 @@ router.delete("/delete_board_message/:title", (req, res) => {
         if (err) {
             res.sendStatus(500);
         } else if (!doc) {
-            res.sendStatus(401);
+            res.sendStatus(404);
         } else {
             res.status(200).send(doc);
         }

@@ -38,7 +38,6 @@ function loadAssets() {
 
     let username = getCookie("username");
     let prev = document.getElementById("user").innerHTML;
-    let user_html = username;
 
     document.getElementById("user").innerHTML = username + prev;
 }

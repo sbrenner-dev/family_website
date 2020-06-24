@@ -6,12 +6,12 @@ let User = require("../models/User");
 
 const salt_rounds = 10;
 
-router.post("/new_user/:user", function (req, res) {
+router.post("/new_user/:user", function(req, res) {
     let req_user = JSON.parse(req.params.user);
 
     let found = false;
 
-    User.findOne({username: req_user.username}, function (error, doc) {
+    User.findOne({ username: req_user.username }, function(error, doc) {
         if (!error && doc) {
             return true;
         } else {
@@ -19,17 +19,19 @@ router.post("/new_user/:user", function (req, res) {
         }
     }).then(found => {
         if (!found) {
-            bcrypt.genSalt(salt_rounds, function (err, salt) {
+            bcrypt.genSalt(salt_rounds, function(err, salt) {
                 bcrypt.hash(req_user.password, salt, function(err, hash) {
-        
+
                     let new_user = new User({
                         username: req_user.username,
                         firstname: req_user.firstname,
                         lastname: req_user.lastname,
                         password: hash,
-                        birthday: req_user.birthday
+                        birthday: req_user.birthday,
+                        email: req_user.email,
+                        email_notifs: req_user.email_notifs
                     });
-                
+
                     new_user.save((error, document) => {
                         if (error) {
                             res.sendStatus(500);

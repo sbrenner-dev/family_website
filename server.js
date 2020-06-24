@@ -2,7 +2,6 @@ const express = require("express");
 const app = express();
 const router = express.Router();
 const PORT = process.env.PORT || 3000;
-const patj = require('path');
 
 const cookieparser = require("cookie-parser");
 
@@ -16,6 +15,8 @@ let HomePage = require("./routes/Home");
 let PostMessage = require("./routes/PutPostMessage");
 let GetPostMessages = require("./routes/GetPostMessages");
 let DeletePostMessage = require("./routes/DeletePost");
+let AddNewInfoPage = require("./routes/AddNewInfo");
+let UpdateEmail = require("./routes/UpdateUserEmail");
 
 app.listen(PORT, () => console.info("Server has started on", PORT));
 
@@ -31,3 +32,5 @@ app.use("/", HomePage);
 app.use("/post", PostMessage);
 app.use("/post", GetPostMessages);
 app.use("/post", DeletePostMessage);
+app.use("/create", AddNewInfoPage);
+app.use("/update", UpdateEmail);

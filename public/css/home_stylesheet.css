@@ -71,7 +71,7 @@ h1 {
 .delete_button {
     cursor: pointer;
     font-size: 14px;
-    background-color: blue;
+    background-color: red;
     border: 2px solid black;
     border-radius: 33px !important;
     color: white;
@@ -96,7 +96,7 @@ h1 {
 }
 
 .delete_button:active {
-    background-color: rgb(138, 152, 212);
+    background-color: rgb(245, 116, 116);
     font-size: 13px;
 }
 

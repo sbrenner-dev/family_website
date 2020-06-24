@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/new_info_styles.css">
+    <script type="text/javascript" src="../scripts/new_info_script.js"></script>
+</head>
+
+<body>
+    <div class="form">
+        <!-- This part will be updated if a new info field is needed for DB -->
+        <h2>
+            Please Enter a Valid Email
+        </h2>
+        <br><br>
+        <label for="username" class="field">Email</label><br>
+        <input type="text" id="email" name="email" class="entry" onclick="this.select()" required><br>
+        <label for="username" class="field">Recieve New Post Emails?</label><br>
+        <input type="checkbox" id="receive_notifs" name="receive_notifs" value="yes" class="entry" /> Yes <br><br>
+        <button class="button" onclick="update()">Update</button><br>
+    </div>
+    <div class="copyright">
+        ©2020 Sam Brenner
+    </div>
+</body>
+
+</html>

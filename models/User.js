@@ -5,17 +5,23 @@ let UserSchema = new Schema({
     username: {
         type: String
     },
-    firstname:{
+    firstname: {
         type: String
     },
-    lastname:{
+    lastname: {
         type: String
     },
-    password:{
+    password: {
         type: String
     },
-    birthday:{
+    birthday: {
         type: Date
+    },
+    email: {
+        type: String
+    },
+    email_notifs: {
+        type: Boolean
     }
 });
 

@@ -11,14 +11,17 @@ function login() {
         method: "HEAD"
     }).then(response => {
         console.log(response);
-        if (response.ok) {
+        if (response.status === 200) {
             window.location.href = "http://192.168.1.19:3000/home";
             document.cookie = "username=" + username + ";path=/";
         } else if (response.status === 401) {
             // wrong password
             alert("Incorrect password for " + username);
             clearAll(["username", "password"]);
-        } else { 
+        } else if (response.status === 301) {
+            window.location.href = "http://192.168.1.19:3000/create/add_new_info";
+            document.cookie = "username=" + username + ";path=/";
+        } else {
             // no user
             alert("No user " + username + " found");
             clearAll(["username", "password"]);
