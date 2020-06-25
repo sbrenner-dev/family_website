@@ -1,5 +1,5 @@
 function clearCookies() {
-    document.cookie.split(";").forEach(function (c) {
+    document.cookie.split(";").forEach(function(c) {
         document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/");
     });
 }
@@ -121,3 +121,6 @@ function deleteMsg(title) {
     });
 }
 
+function redirectToSettings() {
+    window.location.href = "http://192.168.1.19:3000/settings";
+}

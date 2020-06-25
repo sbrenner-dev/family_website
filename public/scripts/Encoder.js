@@ -33,3 +33,5 @@ class Encoder {
         return str;
     }
 }
+
+module.exports = Encoder;

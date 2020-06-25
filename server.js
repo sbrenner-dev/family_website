@@ -17,6 +17,7 @@ let GetPostMessages = require("./routes/GetPostMessages");
 let DeletePostMessage = require("./routes/DeletePost");
 let AddNewInfoPage = require("./routes/AddNewInfo");
 let UpdateEmail = require("./routes/UpdateUserEmail");
+let SettingsPage = require("./routes/Settings");
 
 app.listen(PORT, () => console.info("Server has started on", PORT));
 
@@ -26,11 +27,14 @@ app.use(cookieparser());
 
 app.use("/", LoginPage);
 app.use("/", CreateUserPage);
-app.use("/create", CreateUser);
 app.use("/", LoginUser);
 app.use("/", HomePage);
+app.use("/", SettingsPage);
+
+app.use("/create", CreateUser);
+app.use("/create", AddNewInfoPage);
+app.use("/update", UpdateEmail);
+
 app.use("/post", PostMessage);
 app.use("/post", GetPostMessages);
 app.use("/post", DeletePostMessage);
-app.use("/create", AddNewInfoPage);
-app.use("/update", UpdateEmail);

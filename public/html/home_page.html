@@ -29,13 +29,11 @@
             </div>
             <div class="form">
                 Post a Message
-                <br><br>
-                <label for="title" class="field">Title</label><br>
-                <input type="text" id="title" name="title" class="entry" required><br><br>
-                <label for="contents" class="field">Contents</label><br>
-                <textarea name="contents" id="contents" rows="4" cols="20" class="content_entry"
-                    required></textarea><br><br>
-                <button class="button" onclick="postMessage()">Post</button><br>
+                <label for="title" class="field">Title</label>
+                <input type="text" id="title" name="title" class="entry" required>
+                <label for="contents" class="field">Contents</label>
+                <textarea name="contents" id="contents" rows="4" cols="20" class="content_entry" required></textarea>
+                <button class="button" onclick="postMessage()">Post</button>
             </div>
             <div class="form">
                 Personal Notes
@@ -48,6 +46,7 @@
     </div>
     <div id="user" class="user">
         <button class="button" onclick="logout()">Logout</button>
+        <button class="button" onclick="redirectToSettings()">Settings</button>
     </div>
     <div class="copyright">
         ©2020 Sam Brenner
